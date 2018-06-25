@@ -3,10 +3,11 @@ namespace Customer.Application.Dto
 using Common.Application.Dto;
 using Common.Application.Enumeration;
 using System.Collections.Generic;
+using Accounts.Application.Dto;
 public class CustomerDto: RequestBaseDto {
 	private string firstName;
 	private string lastName;
-	//private List<BankAccountDto> bankAccountsDto;
+	private List<BankAccountDto> bankAccountsDto;
 
 	public string getFirstName() {
 		return firstName;
@@ -24,13 +25,13 @@ public class CustomerDto: RequestBaseDto {
 		this.lastName = lastName;
 	}
 
-	// public List<BankAccountDto> getBankAccountsDto() {
-	// 	return bankAccountsDto;
-	// }
+	public List<BankAccountDto> getBankAccountsDto() {
+		return bankAccountsDto;
+	}
 
-	// public void setBankAccountsDto(List<BankAccountDto> bankAccountsDto) {
-	// 	this.bankAccountsDto = bankAccountsDto;
-	// }
+	public void setBankAccountsDto(List<BankAccountDto> bankAccountsDto) {
+		this.bankAccountsDto = bankAccountsDto;
+	}
 
 	
 }

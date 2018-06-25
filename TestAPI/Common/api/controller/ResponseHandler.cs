@@ -1,4 +1,4 @@
-namespace Common.Application.Controller{
+namespace Common.Api.Controller{
     using System.Collections.Generic;
     using Common.Application.Dto;
     using Microsoft.AspNetCore.Http;

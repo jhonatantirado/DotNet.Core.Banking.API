@@ -9,7 +9,7 @@ namespace NetCoreBankingWebAPI.Accounts
     [Route("api/[controller]")]
     public class AccountsController {
 
-                // GET api/Accounts
+        // GET api/Accounts
         [HttpGet]
         public string Get()
         {
