@@ -12,17 +12,25 @@ namespace Customer.Api{
 		CustomerApplicationService customerApplicationService;
 		
 		ResponseHandler responseHandler;
-		//@RequestMapping(method = RequestMethod.POST, path = "create", consumes = "application/json; charset=UTF-8", produces = "application/json; charset=UTF-8")
+	
+		[HttpPost]
 		public ResponseDto performCreate(CustomerDto customerDto)  {
 			try {
 				customerApplicationService.performCreate(customerDto);
-				return this.responseHandler.getOkCommandResponse("Transfer done!");
+				return this.responseHandler.getOkCommandResponse("Customer created!");
 			} catch(ArgumentException ex) {
 				return this.responseHandler.getAppCustomErrorResponse(ex.Message);
 			} catch(Exception ex) {
 				return this.responseHandler.getAppExceptionResponse();
 			}
 		}
+
+		// GET api/Customers
+        [HttpGet]
+        public string Get()
+        {
+             return "Hola Mundo";
+        }
 	}
 }
 
